@@ -1,8 +1,8 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Link } from "react-router-dom";
 const ForgotPassword = () => {
   return (
-    <div className="container-fluid " id='forgot_password'>
+    <div className="container-fluid " id="forgot_password">
       {/* Outer Row */}
       <div className="row justify-content-center">
         <div className="col-8">
@@ -14,10 +14,12 @@ const ForgotPassword = () => {
                 <div className="col-lg-6">
                   <div className="p-5">
                     <div className="text-center">
-                      <h1 className="h4 text-gray-900 mb-2">Forgot Your Password?</h1>
+                      <h1 className="h4 text-gray-900 mb-2">
+                        Forgot Your Password?
+                      </h1>
                       <p className="mb-4">
-                        We get it, stuff happens. Just enter your email address below
-                        and we'll send you a link to reset your password!
+                        We get it, stuff happens. Just enter your email address
+                        below and we'll send you a link to reset your password!
                       </p>
                     </div>
                     <form className="user">
@@ -30,16 +32,23 @@ const ForgotPassword = () => {
                           placeholder="Enter Email Address..."
                         />
                       </div>
-                      <Link  to='/login' className="btn btn-primary btn-user col-12">
+                      <Link
+                        to="/login"
+                        className="btn btn-primary btn-user col-12"
+                      >
                         Reset Password
                       </Link>
                     </form>
                     <hr />
                     <div className="text-center">
-                      <Link className="small" to='/register'>Create an Account!</Link>
+                      <Link className="small" to="/register">
+                        Create an Account!
+                      </Link>
                     </div>
                     <div className="text-center">
-                      <Link className="small" to='/login' >Already have an account? Login!</Link>
+                      <Link className="small" to="/login">
+                        Already have an account? Login!
+                      </Link>
                     </div>
                   </div>
                 </div>

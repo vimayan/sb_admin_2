@@ -40,7 +40,7 @@ function Charts() {
                     </div>
                     <div className="card-body">
                       <div className="chart-area">
-                      <AreaChart />
+                        <AreaChart />
                       </div>
                       <hr />
                       Styling for the area chart can be found in the
@@ -58,7 +58,7 @@ function Charts() {
                     <div className="card-body">
                       <div className="chart-bar">
                         <BarChart />
-                       </div>
+                      </div>
                       <hr />
                       Styling for the bar chart can be found in the
                       <code>/js/demo/chart-bar-demo.js</code> file.

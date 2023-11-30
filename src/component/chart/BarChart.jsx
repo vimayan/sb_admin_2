@@ -1,8 +1,9 @@
 import React, { useEffect, useRef } from "react";
 import Chart from "chart.js/auto";
 
-Chart.defaults.font.family = 'Nunito, -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif';
-Chart.defaults.color = '#858796';
+Chart.defaults.font.family =
+  'Nunito, -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif';
+Chart.defaults.color = "#858796";
 
 const BarChart = () => {
   const chartRef = useRef();
@@ -35,7 +36,7 @@ const BarChart = () => {
         },
         scales: {
           x: {
-            type: 'category',
+            type: "category",
             time: {
               unit: "month",
             },
@@ -85,7 +86,8 @@ const BarChart = () => {
             caretPadding: 10,
             callbacks: {
               label: function (tooltipItem, data) {
-                var datasetLabel = data.datasets[tooltipItem.datasetIndex].label || "";
+                var datasetLabel =
+                  data.datasets[tooltipItem.datasetIndex].label || "";
                 return datasetLabel + ": $" + tooltipItem.formattedValue;
               },
             },

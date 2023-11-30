@@ -14,8 +14,8 @@ function InsertData({ open, setOpen }) {
   };
 
   const handleKeyDown = (e) => {
-    if (e.key === 'Enter') {
-      e.preventDefault();  
+    if (e.key === "Enter") {
+      e.preventDefault();
       insert(inputValue);
       setInputValue(0);
       setOpen();

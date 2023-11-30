@@ -35,8 +35,7 @@ const PieChart = () => {
     };
   }, []);
 
-  return (<canvas id="myPieChart" ref={chartRef} className="mx-auto"></canvas>
-  );
+  return <canvas id="myPieChart" ref={chartRef} className="mx-auto"></canvas>;
 };
 
 export default PieChart;

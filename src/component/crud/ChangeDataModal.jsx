@@ -1,12 +1,13 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext,useEffect } from "react";
 import { Modal, Button, Form, Table } from "react-bootstrap";
 import GraphContext from "../../context/Graph/GraphContext";
 
 function ChangeData({ change, setChange }) {
   const graph = useContext(GraphContext);
-  const { year, data,modify } = graph;
+  const { year, data, modify } = graph;
 
   const [tableData, setTableData] = useState([...data]);
+  useEffect(() => setTableData([...data]), [data]);
 
   const handleValueChange = (index, newValue) => {
     const updatedData = [...tableData];
@@ -25,6 +26,7 @@ function ChangeData({ change, setChange }) {
         <Modal.Header>
           <Modal.Title>Insert Data</Modal.Title>
         </Modal.Header>
+        <div className="table">
         <Modal.Body>
           <Table striped bordered hover>
             <thead>
@@ -49,11 +51,13 @@ function ChangeData({ change, setChange }) {
             </tbody>
           </Table>
         </Modal.Body>
+        </div>
+     
         <Modal.Footer>
           <Button
             variant="secondary"
             onClick={() => {
-                setChange();
+              setChange();
             }}
           >
             Close

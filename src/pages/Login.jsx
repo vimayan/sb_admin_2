@@ -1,9 +1,9 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Link } from "react-router-dom";
 
 const LoginForm = () => {
   return (
-    <div className="container-fluid p-4 col-md-8" id='login'>
+    <div className="container-fluid p-4 col-md-8" id="login">
       {/* Outer Row */}
       <div className="row justify-content-center">
         <div className=" col-sm-8 ">
@@ -54,21 +54,29 @@ const LoginForm = () => {
                         Login
                       </Link>
                       <hr />
-                      <Link to="/" className="btn btn-google btn-user col-12 bg-danger mb-2 ">
-                        <i className="fab fa-google fa-fw"></i> Login with Google
+                      <Link
+                        to="/"
+                        className="btn btn-google btn-user col-12 bg-danger mb-2 "
+                      >
+                        <i className="fab fa-google fa-fw"></i> Login with
+                        Google
                       </Link>
-                      <Link to="/" className="btn btn-facebook btn-user col-12 bg-primary">
-                        <i className="fab fa-facebook-f fa-fw"></i> Login with Facebook
+                      <Link
+                        to="/"
+                        className="btn btn-facebook btn-user col-12 bg-primary"
+                      >
+                        <i className="fab fa-facebook-f fa-fw"></i> Login with
+                        Facebook
                       </Link>
                     </form>
                     <hr />
                     <div className="text-center">
-                      <Link className="small" to='/forgot_password'>
+                      <Link className="small" to="/forgot_password">
                         Forgot Password?
                       </Link>
                     </div>
                     <div className="text-center">
-                      <Link className="small" to='/register'>
+                      <Link className="small" to="/register">
                         Create an Account!
                       </Link>
                     </div>

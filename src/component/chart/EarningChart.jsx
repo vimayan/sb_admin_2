@@ -9,7 +9,7 @@ Chart.defaults.font.style = "#858796";
 
 const EarningsOverviewChart = () => {
   const graph_data = useContext(GraphContext);
-  const { remove, data, year,minus } = graph_data;
+  const { remove, data, year, minus } = graph_data;
   const [open, setOpen] = useState(false);
   const [change, setChange] = useState(false);
   const chartRef = useRef();
@@ -169,7 +169,10 @@ const EarningsOverviewChart = () => {
               </div>
             </div>
           ) : (
-            <button className="btn btn-success btn-sm"  onClick={open_modal}> Add_Data</button>
+            <button className="btn btn-success btn-sm" onClick={open_modal}>
+              {" "}
+              Add_Data
+            </button>
           )}
         </div>
         {/* Card Body */}

@@ -31,7 +31,7 @@ function GraphAction(props) {
     let new_year = [...state.year];
 
     if (new_data.length > new_year.length) {
-      let add = new_year[new_year.length - 11] + 1;
+      let add = new_year[new_year.length - 1] + 1;
       new_year.push(add);
     }
     dispatch({
@@ -56,7 +56,7 @@ function GraphAction(props) {
         modify: modify,
         remove: remove,
         insert: insert,
-        minus:minus
+        minus: minus,
       }}
     >
       {props.children}
