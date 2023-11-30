@@ -12,6 +12,15 @@ function InsertData({ open, setOpen }) {
     setInputValue(0);
     setOpen();
   };
+
+  const handleKeyDown = (e) => {
+    if (e.key === 'Enter') {
+      e.preventDefault();  
+      insert(inputValue);
+      setInputValue(0);
+      setOpen();
+    }
+  };
   return (
     <>
       <Modal show={open} backdrop="static" keyboard={false}>
@@ -27,6 +36,7 @@ function InsertData({ open, setOpen }) {
                   type="number"
                   placeholder="Enter your input"
                   value={inputValue}
+                  onKeyDown={handleKeyDown}
                   onChange={(e) => setInputValue(e.target.value)}
                 />
               </div>
