@@ -5,12 +5,16 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import "bootstrap/dist/css/bootstrap.css";
 import MenuAction from './context/MenuAction';
+import GraphAction from './context/Graph/GraphAction';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <MenuAction>
+  <GraphAction>
+      <MenuAction>
     <App />
   </MenuAction>
+  </GraphAction>
+
 
  
 );
