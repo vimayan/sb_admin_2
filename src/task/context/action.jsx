@@ -93,16 +93,16 @@ const PeopleAction = (props) => {
 
     const update_remove_mentor_from_student = (student, mentor_id) => {
       const new_mentors = student.mentors.filter(
-        (mentor) => mentor !== mentor_id
+        (mentor) => mentor != mentor_id
       );
       const new_student = { ...student, mentors: [...new_mentors] };
-
       dispatch({ type: "student_update", payload: { ...new_student } });
     };
 
-    students.forEach((student) =>
-      update_remove_mentor_from_student(student, mentor._id)
+    const removing_student = state.list_student.find(
+      (std) => std._id == student_id
     );
+    update_remove_mentor_from_student(removing_student, mentor._id);
   };
 
   const mentor_list_for_selected_student = (student) => {
@@ -154,20 +154,23 @@ const PeopleAction = (props) => {
     const new_student = { ...student, mentors: [...new_mentors] };
 
     dispatch({ type: "student_update", payload: { ...new_student } });
+    dispatch({
+      type: "mentor_history_forStudent",
+      payload: [...mentors],
+    });
 
     const update_remove_student_from_mentor = (mentor, student_id) => {
-      console.log(mentor);
       const new_students = mentor.students.filter(
-        (student) => student !== student_id
+        (student) => student != student_id
       );
       const new_mentor = { ...mentor, students: [...new_students] };
 
       dispatch({ type: "mentor_update", payload: { ...new_mentor } });
     };
-
-    mentors.forEach((mentor) =>
-      update_remove_student_from_mentor(mentor, student._id)
+    const removing_mentor = state.list_mentor.find(
+      (ment) => ment._id == mentor_id
     );
+    update_remove_student_from_mentor(removing_mentor, student._id);
   };
 
   return (
