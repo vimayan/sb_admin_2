@@ -6,12 +6,16 @@ import reportWebVitals from './reportWebVitals';
 import "bootstrap/dist/css/bootstrap.css";
 import MenuAction from './context/MenuAction';
 import GraphAction from './context/Graph/GraphAction';
+import PeopleAction from './task/context/action';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <GraphAction>
       <MenuAction>
-    <App />
+        <PeopleAction>
+        <App />
+        </PeopleAction>
+   
   </MenuAction>
   </GraphAction>
 

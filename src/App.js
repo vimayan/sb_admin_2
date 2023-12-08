@@ -17,6 +17,10 @@ import Buttons from "./pages/Buttons";
 import Cards from "./pages/Cards";
 import Charts from "./pages/Charts";
 import Tables from "./pages/Tables";
+import Students from "./pages/Students";
+import Teachers from "./pages/Teachers";
+import ViewTeachers from "./pages/ViewTeacher";
+import ViewStudents from "./pages/ViewStudent";
 
 function App() {
   return (
@@ -37,6 +41,10 @@ function App() {
             <Route path="border" element={<Borders />} />
             <Route path="charts" element={<Charts />} />
             <Route path="tables" element={<Tables />} />
+            <Route path="teachers" element={<Teachers />} />
+            <Route path="students" element={<Students />} />
+            <Route path="teachers/:teacher" element={<ViewTeachers />} />
+            <Route path="students/:student" element={<ViewStudents />} />
           </Route>
 
           <Route path="*" element={<InvalidRoute />} />

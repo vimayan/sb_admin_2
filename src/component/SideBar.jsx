@@ -183,6 +183,19 @@ function SideBar() {
           </Link>
         </li>
 
+      
+        <li className="nav-item">
+          <Link className="nav-link" to="/teachers">
+          <i className="fa-solid fa-chalkboard-user"></i>
+            <span>Teacher</span>
+          </Link>
+        </li>
+        <li className="nav-item">
+          <Link className="nav-link" to="/students">
+          <i className="fa-solid fa-graduation-cap"></i>
+            <span>Student</span>
+          </Link>
+        </li>
         {/* <!-- Divider --> */}
         <hr className="sidebar-divider d-none d-md-block" />
 
